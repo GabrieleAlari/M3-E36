@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW M3 E36 | La Storia della Leggenda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --m-blue: #0066b2;
+            --m-light-blue: #00a2e2;
+            --m-red: #ff0000;
+            --dark: #050505;
+            --gray: #111;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--dark); color: var(--white); font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+        /* Menu fluido */
+        header {
+            position: fixed; top: 0; width: 100%; padding: 20px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(0,0,0,0.9); backdrop-filter: blur(15px); z-index: 1000;
+            border-bottom: 2px solid var(--m-blue);
+        }
+        .logo { font-family: 'Orbitron'; font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; }
+        .logo span { color: var(--m-red); }
+
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 25px; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--m-light-blue); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1606220838315-056192d5e927?q=80&w=2070'); /* Foto E36 */
+            background-size: cover; background-position: center; text-align: center;
+        }
+        .hero h1 { font-family: 'Orbitron'; font-size: clamp(3rem, 10vw, 6rem); margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; letter-spacing: 5px; color: var(--m-light-blue); font-weight: bold; }
+
+        /* Sezione La Storia */
+        .story-section { padding: 100px 10%; line-height: 1.8; }
+        .story-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .section-title { font-family: 'Orbitron'; font-size: 2.5rem; margin-bottom: 30px; border-left: 5px solid var(--m-red); padding-left: 20px; }
+        .story-text p { margin-bottom: 20px; color: #ccc; }
+
+        .image-box img { width: 100%; border-radius: 5px; box-shadow: 0 0 20px var(--m-blue); }
+
+        /* Dati Tecnici */
+        .specs { display: flex; justify-content: space-around; background: var(--gray); padding: 50px 0; border-top: 1px solid #333; }
+        .spec-item h3 { color: var(--m-light-blue); font-family: 'Orbitron'; font-size: 2.5rem; }
+        .spec-item span { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .story-content { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BMW M3 <span>E36</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#storia">La Storia</a></li>
+                <li><a href="#tech">Tecnica</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div data-aos="zoom-in">
+            <h1>LEGENDARY <span>M3</span></h1>
+            <p>PURE DRIVING PLEASURE</p>
+        </div>
+    </section>
+
+    <section class="specs">
+        <div class="spec-item" data-aos="fade-up">
+            <h3 class="counter" data-target="321">0</h3>
+            <span>Cavalli (S50B32)</span>
+        </div>
+        <div class="spec-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="counter" data-target="250">0</h3>
+            <span>Km/h (Limitata)</span>
+        </div>
+        <div class="spec-item" data-aos="fade-up" data-aos-delay="400">
+            <h3 class="counter" data-target="5.5">0</h3>
+            <span>0-100 Km/h</span>
+        </div>
+    </section>
+
+    <section id="storia" class="story-section">
+        <div class="story-content">
+            <div class="story-text" data-aos="fade-right">
+                <h2 class="section-title">La Storia</h2>
+                <p>Presentata nel 1992, la M3 E36 ha avuto l'arduo compito di sostituire l'iconica E30. È stata la prima M3 a montare un motore a 6 cilindri in linea, diventando rapidamente il punto di riferimento per le berline sportive europee.</p>
+                <p>Con il suo design pulito, i famosi specchietti aerodinamici e un telaio perfettamente bilanciato, la E36 ha definito un'era, unendo l'eleganza quotidiana alle prestazioni brutali del reparto Motorsport.</p>
+            </div>
+            <div class="image-box" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=1000" alt="BMW M3 E36">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Script Contatori
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    </script>
+</body>
+</html>
